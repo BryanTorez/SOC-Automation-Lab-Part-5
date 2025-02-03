@@ -378,64 +378,43 @@ For "Find Actions", I don't want an IP address. Instead, I want to look for a ha
 <img src="https://snipboard.io/L1Stb0.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
 <br />
 <br />
 So it's been a couple minutes and I went ahead and refreshed my Shuffle instance. Now, when I click on VirusTotal under the "Find Actions", I can see more actions. Again, I'm not looking for an IP address report. Instead, I want to look for the hash. So I'll type in "hash", and I can find that there's a hash report.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/f2xNbr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/9CGQzl.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-If you want, you can paste in your API key here or you can authenticate with "VirusTotal V3". By clicking on "AUTHENTICATE VIRUSTOTAL V3", I'll paste in my API key that I copied from Virustotal. Then, I'll hit "Submit". Make sure for the hash section, to select the regex output.
+If you want, you can paste in your API key here or you can authenticate with "VirusTotal V3". By clicking on "AUTHENTICATE VIRUSTOTAL V3", I'll paste in my API key that I copied from Virustotal. Then, I'll hit "Submit".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/pwIZ9l.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/9daCWl.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Right now, it's pointing to "$exec.all_fields.agent.ip" and we don't want that. We want to select the regex output for "list". Since again, the rexgex is there to parse out the value of the hash. Now, I'll go ahead and save the workflow.
+Make sure for the hash section, to select the regex output. Right now, it's pointing to "$exec.all_fields.agent.ip" and we don't want that. We want to select the regex output for "list". Since again, the rexgex is there to parse out the value of the hash. Now, I'll go ahead and save the workflow.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/1fx37B.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/nCpQDY.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/WkDwgZ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/OKLM8W.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -443,16 +422,16 @@ Right now, it's pointing to "$exec.all_fields.agent.ip" and we don't want that. 
 Click on the person icon and then we'll select the middle workflow option. Then, we'll rerun workflow. Now let's take a look at VirusTotal's output. We'll go ahead and expand that and we notice that the status is '404'. So that is quite strange. This means that VirusTotal was not able to return any results for us.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/hOT5L8.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/G1ujsf.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/QPTXuU.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/fqj8Cz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -460,16 +439,7 @@ Click on the person icon and then we'll select the middle workflow option. Then,
 Now, if we were to look at the query itself in the URL section. We see that it's going to "api/v3/files/report" and then we see our "hash=" the hash value. So this seems about right, but how come it's giving us a '404' error?
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/uJe9f8.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -477,16 +447,13 @@ Now, if we were to look at the query itself in the URL section. We see that it's
 Let's head over to VirusTotal's API documentation. If I were to scroll down we see that there is a "Get a file report by hash" and that is what we're interested in. So I'll go ahead and click on that and I want you to take a look at the URL here.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/bkMaJ1.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/tHXNZL.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/qI4AX6.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -494,50 +461,35 @@ Let's head over to VirusTotal's API documentation. If I were to scroll down we s
 It is going to "api/v3/files/{id} and that's interesting. So if we were to go back into our Shuffle. Our URL is going to "/api/V3/files/report". The documentation mentioned nothing about "report". So maybe that is why we are getting a '404' error. The VirusTotal app in Shuffle has an incorrect URL or it was probably correct before but VirusTotal updated its API.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/bBEZ79.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Now, how do we fix this? We can actually head over to VirusTotal's app and edit it. So to do that, let's head over to apps. Once you are in the application page, you want to select the new window under the VirusTotal app. You'll be presented with VirusTotal's application page for Shuffle. What you want to do is "Fork" over the application so you can edit it.
+Now, how do we fix this? We can actually head over to VirusTotal's app and edit it. So to do that, let's head over to apps. Once you are in the application page, you want to select the new window under the VirusTotal app. You'll be presented with VirusTotal's application page for Shuffle. What you want to do is "Fork" over the application so you can edit it. So let's click on that. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/8MrSLQ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/0cP5gk.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/V5LeSs.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/kMoN7K.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-So let's click on that. Scroll down and then let's find our hash report. Now, we can see that it is indeed referencing "report". As you recall looking at API documentation on VirusTotal, it did not mention anything about "report". Instead, it was pointing towards an ID variable enclosed in curly brackets.
+Scroll down and then let's find our hash report. Now, we can see that it is indeed referencing "report". As you recall looking at API documentation on VirusTotal, it did not mention anything about "report". Instead, it was pointing towards an ID variable enclosed in curly brackets.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/6qcLFS.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/HlM95R.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
