@@ -497,50 +497,50 @@ Scroll down and then let's find our hash report. Now, we can see that it is inde
 So that's what I'll do. I'll change that and then hit "Submit". I'll scroll down and save it out. Let's try this again. I've placed the edited VirusTotal onto our workflow so I'll go ahead and select that. Again, you do have an option to authenticate with the API key or you can click on the plus icon to authenticate. I will be using the API key, so I'll paste in my VirusTotal API key and hit "Submit".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/L6eVyZ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/eliVMz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/2qN6sw.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<br />
-<br />
-Now, I do not want to get an IP address report. Change this to "Get a hash report". Change the ID to the regex ID. Then, we'll go ahead and save the workflow and rerun it. Click on "Rerun" and let's expand VirusTotal. Look at that, it's a lot different. If we scroll down to "last_analysis_stats".
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Qrlf1X.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-We can see that it says "malicious : 63". That means that '63' scanners had detected this file as malicious. Now, you might be asking how did I know which field to use or the reputation, and that's a great question. When I search our hash through VirusTotal, we can see that it detects '63' out of '71'.
+Now, I do not want to get an IP address report. Change this to "Get a hash report". Change the ID to the regex ID. Then, we'll go ahead and save the workflow and rerun it. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/JNEYSr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/qDhW0U.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/PeMdJR.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/aT8Ajg.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
+Click on "Rerun" and let's expand VirusTotal. Look at that, it's a lot different. If we scroll down to "last_analysis_stats". We can see that it says "malicious : 63". That means that '63' scanners had detected this file as malicious. Now, you might be asking how did I know which field to use or the reputation, and that's a great question. When I search our hash through VirusTotal, we can see that it detects '63' out of '72'.
+<br />
+<br />
+<img src="https://snipboard.io/8hL2Qa.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/xfTdze.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/4evOdm.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/oS9aOV.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -548,7 +548,7 @@ We can see that it says "malicious : 63". That means that '63' scanners had dete
 All we need to do now is grab the output that Shuffle had provided us and search for '63'. So we obtained the field name, which in our case was malicious under the last analysis stats, which sounds about right. To quickly recap, we set up our SOAR platform to receive our Wazuh alert. We then performed regex to parse out the sha256 hash, and we then used VirusTotal to check its reputation.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/pLWPzy.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
