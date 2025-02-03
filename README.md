@@ -210,53 +210,41 @@ Click on our webhook and make sure you select "Start". Now let's click on the pe
 <br />
 <br />
 <br />
-So let's do a little bit of troubleshooting, shall we? We'll go back to our Wazuh manager and we'll open up the configuration file. Now, I just need to make sure to read my URL or anything such as my "rule_id" I do recall seeing that it's '102' which is correct, but if you look at the URL there's "HTTP" and "https" so that is clearly wrong.
+So let's do a little bit of troubleshooting, shall we? We'll go back to our Wazuh manager and we'll open up the configuration file. Now, I just need to make sure to read my URL or anything such as my "rule_id" I do recall seeing that it's '102' which is correct, but if you look at the URL there's "HTTP" and "https" so that is clearly wrong. We will remove "HTTP" and save that out. Now that should be good. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/2jmgpa.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/EyZKJG.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ClZeOj.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-We will remove "HTTP" and save that out. Now that should be good. Let's restart Wazuh manager. Now that's done, let's head back over to our client machine. Exit out of Mimikatz. I'm going to clear the screen because it's getting quite messy and then type in ".\youareawesome.exe".
+Let's restart Wazuh manager. Now that's done, let's head back over to our client machine. Exit out of Mimikatz. I'm going to clear the screen because it's getting quite messy and then type in ".\youareawesome.exe".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/T7s04R.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/R3g8Xe.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Now we should see some events in Shuffle. Now let's go ahead and click on this, select the "Execution Argument," and expand that. Look at that, we get all of the information that was generated from Wazuh itself. Isn't that awesome. Think about all the possibilities that we can do.
+Now we should see some events in Shuffle. Now let's go ahead and click on the Wazuh alert. Select the "Execution Argument," and expand that. Look at that, we get all of the information that was generated from Wazuh itself. Isn't that awesome? Think about all the possibilities that we can do.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/sTMOtx.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/KJNfY7.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/dhY4rD.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -264,67 +252,31 @@ Now we should see some events in Shuffle. Now let's go ahead and click on this, 
 The workflow that we will build for Mimikatz today will only work for this demo, but the same concepts can be applied to other use cases. As long as you follow the guidelines and read the instructions, you should be good to customize your own alerts and automation.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
 <br />
 <br />
 Here is the workflow that we will be creating today. We will have our Mimikatz alert be sent over to Shuffle, Shuffle will then take that and extract the file hash from the file, and then check the reputation score using VirusTotal. We will then send that over to the Hive to create an alert and then we will send an email to the analyst so they can perform further investigation.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/OTYulv.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-When we look at our return values for the hashes, we notice that its appended by their hash type. For example, in this case it is appended by "SHA1=" and then the hash value. If we wanted to automate this, we would need to parse out the hash value itself, because the entire value including the "SHA1=" will be sent over to, let's say VirusTotal, to check and we don't want to do that, we just want to send VirusTotal the hash value..
+When we look at our return values for the hashes, we notice that its appended by their hash type. For example, in this case it is appended by "SHA1=" and then the hash value. If we wanted to automate this, we would need to parse out the hash value itself, because the entire value including the "SHA1=" will be sent over to, let's say VirusTotal, to check and we don't want to do that, we just want to send VirusTotal the hash value. Why don't we actually do that? So let's close this out. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/4ZFegp.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Why don't we actually do that? So let's close this out. I'll click on the "Change Me" icon and instead of "Repeat back to me", we actually have a couple of other options that we can use. So we can type in "regex" and select Rexgex capture group.
+I'll click on the "Change Me" icon and instead of "Repeat back to me", we actually have a couple of other options that we can use. So we can type in "regex" and select Rexgex capture group.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/m1cg7i.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Xsh6Kt.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -332,16 +284,10 @@ Why don't we actually do that? So let's close this out. I'll click on the "Chang
 For the input data, we can select the plus button and select "Execution Argument" and let's look for our hash. Now if you highlight over it, you'll actually get the values or the output on the left-hand side.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/aPJXDz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/WDH8qU.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -349,16 +295,7 @@ For the input data, we can select the plus button and select "Execution Argument
 Now at the bottom, it tells us to do some rexgex. Do you know how to write regex by any chance? If not, that is perfectly fine. We can head over to our trusty ChatGPT. Using ChatGPT, we can create a prompt saying "create a regex to parse the sha256 value of the hash" and then I'll hit "Enter".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/E80Qov.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -366,16 +303,13 @@ Now at the bottom, it tells us to do some rexgex. Do you know how to write regex
 Right off the bat, ChatGBT created a regex for us. So we can start copying that. Once it's finished talking, I'll scroll back up to copy the regex and then I'll head over to Shuffle. Now, we can paste in the regex that ChatGBT created for us and use AI to our advantage in these types of cases.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/HfCu2W.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/gHBJyC.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/voTYNt.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -383,16 +317,13 @@ Right off the bat, ChatGBT created a regex for us. So we can start copying that.
 Once we pasted that in, let's save our workflow and then we can click on the person icon. Then, click on the refresh button or rerun workflow button at the top. We'll click on that and then if we were to expand our results, we can see that it parsed out the sha256 hash. Now, when we encounter something that we aren't too familiar with, don't be afraid to utilize ChatGPT and ask it to help you.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/0wqU38.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/N4t2gA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/vTf38Q.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -400,16 +331,10 @@ Once we pasted that in, let's save our workflow and then we can click on the per
 We can utilize AI to our advantage to allow us to become better at what we do. Now, that you have parsed the hash value for the file, we can automatically send that over to VirusTotal and check the reputation score. Now, I will rename "Change Me" to "SHA256_Regex".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/X6arjC.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/i9LIyl.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -417,16 +342,7 @@ We can utilize AI to our advantage to allow us to become better at what we do. N
 The next thing we want to do is utilize VirusTotal's API. That that way we can automatically ask VirusTotal to check this hash and return the values to us. In order to utilize their API, we must create an account with them. So let's go and do that.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/vOBoZA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -434,16 +350,7 @@ The next thing we want to do is utilize VirusTotal's API. That that way we can a
 You can head over to VirusTotal's site and then click on "Sign up" on the top-right corner. Once you've created your account, go ahead and copy your API key and then head back over to Shuffle. Once we're in Shuffle, we can click on "Apps" and then we want to search for VirusTotal and hit "Enter".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/B5zXDt.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -451,16 +358,16 @@ You can head over to VirusTotal's site and then click on "Sign up" on the top-ri
 Now, we can click on VirusTotal and then it will activate VirusTotal onto our Shuffle instance. Once that's done, go ahead and drag VirusTotal over and it will automatically connect. Now, when you click on VirusTotal, rename it as "Virustotal".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/S2dUWH.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/jIT1Rq.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/SOzP2N.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/q3Z1MU.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -468,7 +375,7 @@ Now, we can click on VirusTotal and then it will activate VirusTotal onto our Sh
 For "Find Actions", I don't want an IP address. Instead, I want to look for a hash. So I'll click on the drop-down. Now, you might only see one action. That's okay, that's simply because VirusTotal is still activating in the background. You want to wait just a bit and then more actions will populate.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/L1Stb0.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
