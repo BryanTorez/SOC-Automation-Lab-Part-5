@@ -551,15 +551,6 @@ All we need to do now is grab the output that Shuffle had provided us and search
 <img src="https://snipboard.io/pLWPzy.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
 <br />
 <br />
 Next, we will send the details over to the Hive. So the Hive can create an alert for case management. So under the "Application" tab at the bottom left-hand corner, we want to search for The Hive and we want "TheHive 5". So click on that and then we will drag it over to our workflow and then let's take a look at the action.
@@ -806,7 +797,7 @@ Search and click on "commandline". Awesome. Now you can keep building this, but 
 <br />
 <br />
 <br />
-For the title, I'll type in "Mimikats Detected". Now, this is very static. What we can do is just tie it to the alert itself. "Tlp" is the traffic light protocol, so the confidentiality of information.
+For the title, I'll type in "Mimikats Detected". Now, this is very static. What we can do is just tie it to the alert itself. "Tlp" is the traffic light protocol, so the confidentiality of information. I'll leave it as '2'. 
 <br />
 <br />
 <img src="https://snipboard.io/BnHyhl.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -815,41 +806,29 @@ For the title, I'll type in "Mimikats Detected". Now, this is very static. What 
 <img src="https://snipboard.io/PFOvjT.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="https://snipboard.io/jyrMYO.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/oBCntX.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-I'll leave it as '2'. For the type, I'll type "internal", as in where did that alert come from. Now, let's go ahead and save this workflow. However, before we run the workflow. We'll need to modify our cloud firewall to allow all IPS's coming inbound on Port '9000'.
+For the type, I'll type "internal", as in where did that alert come from. Now, let's go ahead and save this workflow. However, before we run the workflow. We'll need to modify our cloud firewall to allow all IPS's coming inbound on Port '9000'. Since that is where my Hive instance will live. This will be a temporary rule to allow us to test this automation. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/d5ubkD.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/rfpSNq.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Since that is where my Hive instance will live. This will be a temporary rule to allow us to test this automation. So let's head over to our Digital Ocean and click on "Networking". Head over to our "Firewalls". Then, select the firewall that we created.
+So let's head over to our Digital Ocean and click on "Networking". Head over to our "Firewalls". Then, select the firewall that we created.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/eMGmH1.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/TEWUod.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -857,16 +836,7 @@ Since that is where my Hive instance will live. This will be a temporary rule to
 Now, we want to create a new rule and put it as custom. Then, we want to add in the port '9,000'. We will remove "All IPv6", but we will keep all "IPv4". I'll save it out. Now, any source will have access to our machines on Port '9000'. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/4UvtAH.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -874,33 +844,24 @@ Now, we want to create a new rule and put it as custom. Then, we want to add in 
 Heading back to our Shuffle. We can now rerun the workflow. So click on the person icon and then rerun the workflow. Scrolling down, it looks like the Hive was successful. So let's go into our Hive instance. Look at that, automatically the alert was created.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ewWEtc.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/cj3Nyu.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/oSVE9N.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/e0JcwE.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-"Mimikats Usage Detected". Click on that and we have our description and summary. Now, you can see how powerful this is if you really put in more effort into the summary and description because this will tell the analyst a bunch of information very quickly.
+Click on that and we have our description and summary. Now, you can see how powerful this is if you really put in more effort into the summary and description because this will tell the analyst a bunch of information very quickly.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/A7zmhU.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -908,16 +869,13 @@ Heading back to our Shuffle. We can now rerun the workflow. So click on the pers
 The next step is to send an email to our analyst containing relevant information. To do that, you can click on "Apps" at the bottom left and drag the email application. Then, connect VirusTotal over to the email. Now, we can enter in the recipient, so I can type in any email I want, as long it is a valid email.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/rTb86e.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/TLyegB.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Qxnzk5.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
