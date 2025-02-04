@@ -880,19 +880,13 @@ The next step is to send an email to our analyst containing relevant information
 <br />
 <br />
 <br />
-Now, if you don't want to use your personal email. Well I want to introduce you to our SquareX. Not only do they offer disposable email, they also have what are called disposable web browsers and file viewers. I'll enter in my disposable email from SquareX and now let's change the information to provide some details.
+Now, if you don't want to use your personal email. Well I want to introduce you to SquareX. Not only do they offer disposable email, they also have what are called disposable web browsers and file viewers. I'll enter in my disposable email from SquareX and now let's change the information to provide some details.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ZqUVcl.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/bxZWcS.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -900,16 +894,16 @@ Now, if you don't want to use your personal email. Well I want to introduce you 
 The subject will be "Mimikats Detected!". Then, I'll put in "time:". Let's head over to our execution arguments and then let's look for "utcTime". Type in "title:". I think it's useful to put in the computer name as well, right?
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/A8YRMj.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/hqW5zH.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/hrzV2q.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/LuYSPb.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -917,50 +911,18 @@ The subject will be "Mimikats Detected!". Then, I'll put in "time:". Let's head 
 If Mimikats is detected, you want to know where it was detected from. Wonderful, let's go ahead and save that out. Now, we'll rerun the workflow. Heading over to my disposable email from SquareX, we can click on the new email that was received.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/KZSsuB.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/zNAoge.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Look at that, "Shuffle - Mimikats Detected!" That is super cool. To showcase the responsive feature, I deployed another virtual machine since from my testing it seems that the responsive scripts for Windows don't work as well compared to Linux.
+Look at that, "Shuffle - Mimikats Detected!" That is super cool. To showcase the responsive feature, I deployed another virtual machine since from my testing it seems that the responsive scripts for Windows don't work as well compared to Linux. I will use a similar workflow, however this time, we will add a user input. Then, we'll ask the user if they want to block a certain IP. Now, I did not show you the steps for creating an Ubuntu virtual machine and configuring some of the options since I want that to be your lab portion, but I will demonstrate the responsive action.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<br />
-<br />
-I will use a similar workflow, however this time, we will add a user input. Then, we'll ask the user if they want to block a certain IP. Now, I did not show you the steps for creating an Ubuntu virtual machine and configuring some of the options since I want that to be your lab portion, but I will demonstrate the responsive action.
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/I30Qyg.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -968,27 +930,15 @@ I will use a similar workflow, however this time, we will add a user input. Then
 Our goal here is to block any source IPS that attempts to connect to our Ubuntu machine, via SSH. To do this, you will need to have your Ubuntu machine in the cloud and create a rule to allow all TCP connections towards this Ubuntu machine. However, you can do this On-Prem and use an attacker machine that you own to simulate a SSH brute force attack.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
 <br />
 <br />
 In Shuffle, we want to add on the HTTP application. So I'll go ahead and drag that over. I'll rename this as "Get-API" and have defined action as "Curl". For the statement, at the bottom you want to include the following and make sure that a firewall rule exists to allow all inbound traffic to Wazuh on Port '55,000'.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/06mJnQ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/khgO0E.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
