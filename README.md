@@ -979,53 +979,29 @@ So let's go ahead and search that and then click it to start downloading and act
 <br />
 <br />
 <br />
- I'll save the workflow. Now that's good, we'll head over to the Wazuh application. I'll leave "Find Actions" as "Run command". As for the API key, we'll select our "Get-API" at node.
+I'll save the workflow. Now that that's good, we'll head over to the Wazuh application. I'll leave "Find Actions" as "Run command". As for the API key, we'll select our "Get-API" at node.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/SeFruM.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-So if I were to rebuild this workflow just a little bit, this is how it will look like. The Wazuh alert will feed into the "Get-API". The "Get-API" will then feed over to VirusTotal. VirusTotal will run its reputation on the source IP and then VirusTotal will eventually connect to what is called a User Input.
+So if I were to rebuild this workflow just a little bit, this is how it will look like. The Wazuh alert will feed into the "Get-API". The "Get-API" will then feed over to VirusTotal. VirusTotal will run its reputation on the source IP and then VirusTotal will eventually connect to what is called a User Input. That will ask the user if they want to block that IP. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/SeFruM.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/pIkaix.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-That will ask the user if they want to block that IP. Now, I don't want to put in the user input yet, so I'll just connect VirusTotal over to Wazuh. That way we can test the responsive capability without constantly asking the user to see if they want to block an IP.
+Now, I don't want to put in the user input yet, so I'll just connect VirusTotal over to Wazuh. That way we can test the responsive capability without constantly asking the user to see if they want to block an IP.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/X4TcqO.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1033,16 +1009,16 @@ That will ask the user if they want to block that IP. Now, I don't want to put i
 Now, that we have Wazuh connected. Again, the API key we're going to select it as "Get-API". For the URL, change the "localhost" to your Wazuh public IP. Mine is '159.203.17.39' on Port '55,000'. If we scroll down, we see what is called an Agent List. Each Wazuh agent will have an associated ID with it.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/yfV3kv.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/fzdLSh.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ahfBci.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/F4PgeH.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1050,16 +1026,13 @@ Now, that we have Wazuh connected. Again, the API key we're going to select it a
 To find this, we can head back over to Wazuh's dashboard. you want to click on the drop-down arrow and select "Agents". As we can see at the bottom, the Ubuntu agent ID is '002'. Yours might be different depending on how many hosts you have, but that is how you identify your ID.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/YucQb3.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/qoxQpU.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/PzV8vg.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
