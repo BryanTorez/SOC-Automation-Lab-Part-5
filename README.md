@@ -565,16 +565,10 @@ All we need to do now is grab the output that Shuffle had provided us and search
 Next, we will send the details over to the Hive. So the Hive can create an alert for case management. So under the "Application" tab at the bottom left-hand corner, we want to search for The Hive and we want "TheHive 5". So click on that and then we will drag it over to our workflow and then let's take a look at the action.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/hst6pU.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/805uSK.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -582,16 +576,7 @@ Next, we will send the details over to the Hive. So the Hive can create an alert
 Now, we might again see only one action, but that's okay. It's since loading in the background. If you don't want to wait, you can try refreshing your workflow to see if theHive's actions will populate. So I went ahead and refreshed my workflow and I do see a lot more actions.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/vk5Eoc.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -599,16 +584,10 @@ Now, we might again see only one action, but that's okay. It's since loading in 
 Before we move on with Shuffle, let's head over to TheHive. If you recall, we can log in using the default credentials of "admin@thehive.local" and the password is "secret". By default, we only have one organization and that is named "admin". Let's create a new organization and create a new user for that organization.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/gahzer.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/6stCc5.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -616,16 +595,16 @@ Before we move on with Shuffle, let's head over to TheHive. If you recall, we ca
 To do that you want to click on the plus button at the top-left corner. For the organization name, I'll just name this "Mydfir" and the description will be "SOC Automation Project". I'll confirm that. Now, that we have a new organization, go ahead and click into it. Immediately, it says no users have been found. So let's add two users.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ERA5Lt.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/URp1QM.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/WnYxFN.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/QWEF3R.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -633,50 +612,29 @@ To do that you want to click on the plus button at the top-left corner. For the 
 For the first user, I'll leave the type as "Normal" and the login will be "mydfir@test.com". For profile, I'm going to select "analyst". I'll save. For the second user, instead of selecting "Normal", I'm going to select "Service". In this case. For the login, I'll type in "shuffle@test.com" and the name I'll just type in "SOAR".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/xQ0WO5.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/vhFP4c.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-As for the profile, we're going to select "analyst". In a real world environment, you would want to create a new set of permissions with the principle of lease privilege in mind and tie that to the service account. The principle of lease privilege, for those that don't know, is where an account is given the minimum level of permission to perform its function.
+As for the profile, we're going to select "analyst". In a real world environment, you would want to create a new set of permissions with the principle of lease privilege in mind and tie that to the service account. The principle of lease privilege, for those that don't know, is where an account is given the minimum level of permission to perform its function. In our case again, because it is a demo environment, we're okay to just select "analyst". I'll hit "Confirm". 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/fCh6HA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-In our case again, because it is a demo environment, we're okay to just select "analyst". I'll hit "Confirm". The next thing we want to do is create a password for the "mydfir" account. We can highlight the account and select "Preview". Scroll down and then you will see "Set a new password".
+The next thing we want to do is create a password for the "mydfir" account. We can highlight the account and select "Preview". Scroll down and then you will see "Set a new password".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ENXgBm.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/daiPlL.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -684,16 +642,13 @@ In our case again, because it is a demo environment, we're okay to just select "
 Once you set a password, hit "Confirm". For the SOAR user, you want to select "Preview" and you want to create an API key for this user. Once your API key is created, go ahead and copy that out and make sure you put it somewhere safe because we will be using this to authenticate with Shuffle.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/eLvcR8.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/aI1F0o.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/hUtXKa.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -701,16 +656,13 @@ Once you set a password, hit "Confirm". For the SOAR user, you want to select "P
 Now, I'll log out of this administrative account and then I will log into "mydfir" account. Once you log in, you're now presented with a different page. We can see cases, well, in this case hahaha, no cases have been found. However, we'll see cases here eventually, and you'll also see alerts.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ibT9jI.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Y0K59V.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/g3CWOB.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -718,21 +670,15 @@ Now, I'll log out of this administrative account and then I will log into "mydfi
 Now, let's head over to Shuffle and configure that to work with The Hive on our Shuffle instance. We want to select the plus button beside "Authenticate" because we want to authenticate to The Hive using our API key. Copy the API key and paste it into your Hive. As for for the URL, you want to type in the public IP of your Hive instance, along with the port number.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ZbQ8Do.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/lOrhS0.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-So in my case, my Hive instance public IP address is '143.110.217.149' on Port '9000'. I'll hit submit. Great. Now under the "Find Action", I don't want to query the API. Instead, I want to create an alert. So I'll select "Create alert" and at the bottom we need to select is the "Date".
+ Great. Now under the "Find Action", I don't want to query the API. Instead, I want to create an alert. So I'll select "Create alert" and at the bottom we need to select is the "Date".
 <br />
 <br />
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
