@@ -678,19 +678,16 @@ Now, let's head over to Shuffle and configure that to work with The Hive on our 
 <br />
 <br />
 <br />
- Great. Now under the "Find Action", I don't want to query the API. Instead, I want to create an alert. So I'll select "Create alert" and at the bottom we need to select is the "Date".
+ Great. Now under the "Find Action", I don't want to query the API. Instead, I want to create an alert. So I'll select "Create alert" and at the bottom, we need to select is the "Date".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/bGEzhg.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/rbTwMp.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/VIg2ZH.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -698,16 +695,13 @@ Now, let's head over to Shuffle and configure that to work with The Hive on our 
 Now, to get the date we must connect our Hive to the workflow. So I'll connect VirusTotal to The Hive. That way, it can take a look into our Wazuh alert. So to select the date, I'll click on the plus button and then I'll click on "Execution Argument".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/gAdyoY.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/70HfFb.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/3zFkQd.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -715,16 +709,10 @@ Now, to get the date we must connect our Hive to the workflow. So I'll connect V
 Now, before I even go through that, I want to show you what it looks like without the connection. So if click on the "Date" and select the plus button, I don't see anything. Well, I see something but I don't see VirusTotal. Now, I do want to connect it so I can see how it flows.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/WhF3jK.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Dy0KrW.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -732,33 +720,24 @@ Now, before I even go through that, I want to show you what it looks like withou
 I'll select "Date" and hit the plus button. Now I can see "Sha256" and "Virusotal" as well. It just seems a lot cleaner to me, so that's why I like to make sure I connect things. Now, we'll go into "Execution Argument". Then, we'll look for "utcTime".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/aLwvhp.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/kivUDN.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Now, if you're not sure. Again, if you just highlight the field, it will populate the field value on the left-hand side. I'll select "utcTime". For the description, let's type in "Mimikatz Detected on host:" and let's select the field name that contains the host.
+Now, if you're not sure. Again, if you just highlight the field, it will populate the field value on the left-hand side. I'll select "utcTime". For the description, let's type in "Mimikatz Detected on host:" and let's select the field name that contains the host, also known as "computer".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/xnAaoT.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/7jDk4S.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/z0lIup.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -766,16 +745,13 @@ Now, if you're not sure. Again, if you just highlight the field, it will populat
 So we'll add on "from user:". Let's scroll down, to find "user". So if I were to receive an alert, what are some of the fields that will provide a lot of information? Now, this is very subjective depending on the analyst itself. However, for the sake of this demo, I'll just leave it as these two for now.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/A6P0az.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/FlycN0.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/bOD7Ic.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -783,16 +759,10 @@ So we'll add on "from user:". Let's scroll down, to find "user". So if I were to
 For external link, we don't need to add anything for now. For the flag, we'll put it as false. As for the value, two is the default, according to the documentation. "Pap" is permissible actions protocol, aka the level of exposure of information.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ETbeW7.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/MHPwem.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -800,67 +770,52 @@ For external link, we don't need to add anything for now. For the flag, we'll pu
 Next is severity, which I will put it as two. For the source, typically this is where the alert is coming from. I'll just say "Wazuh". The source reference is just a little bit of metadata for the alert itself. I'll just put in "Rule: 100002".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/WLIuPg.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-The "Status" is the status of the alert that will be created in the Hive. So we want the "Status" to be new. For the summary, similar to the description, I'll type in "Mimikats activity detected on host:". Let's select "Computer". For the process ID, this is all up to you on what kind of information you want it to spit out.
+The "Status" is the status of the alert that will be created in the Hive. So we want the "Status" to be new. For the summary, similar to the description, I'll type in "Mimikats activity detected on host:". Let's select "Computer". For the process ID, this is all up to you on what kind of information you want it to spit out. Essentially, I'm going to ask it for the process ID and the command line. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/j4tvNm.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/QIx4LB.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/X6Fuen.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<br />
-<br />
-Essentially, I'm going to ask it for the process ID and the command line. Search and click on "commandline". Awesome. Now you can keep building this, but again for the sake of the demo, I'll just leave it as is. For the tags, we need to put this into an array.
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/oT42WB.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-I'll put in the Mitre Attack tag. Which is "t1003", AKA credential dumping. For the title, I'll type in "Mimikats Detected". Now, this is very static. What we can do is just tie it to the alert itself. "Tlp" is the traffic light protocol, so the confidentiality of information.
+Search and click on "commandline". Awesome. Now you can keep building this, but again for the sake of the demo, I'll just leave it as is. For the tags, we need to put this into an array. I'll put in the Mitre Attack tag. Which is "t1003", AKA credential dumping. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/G8ogfE.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/tYZPXN.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/APvtDz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+For the title, I'll type in "Mimikats Detected". Now, this is very static. What we can do is just tie it to the alert itself. "Tlp" is the traffic light protocol, so the confidentiality of information.
+<br />
+<br />
+<img src="https://snipboard.io/BnHyhl.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/PFOvjT.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/jyrMYO.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
