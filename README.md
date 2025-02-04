@@ -938,13 +938,7 @@ In Shuffle, we want to add on the HTTP application. So I'll go ahead and drag th
 <img src="https://snipboard.io/06mJnQ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="https://snipboard.io/khgO0E.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/w7SVMo.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -952,16 +946,10 @@ In Shuffle, we want to add on the HTTP application. So I'll go ahead and drag th
 Now, the reason that we are doing this is because if we want to utilize Wazuh's API capability, we must first authenticate and obtain a JWT token, AKA a JSON web token. In order to do that, we need to initiate a "curl" with a username and password.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ARuxcX.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/TzMxrd.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -969,38 +957,29 @@ Now, the reason that we are doing this is because if we want to utilize Wazuh's 
 Now, if you recall, there was a Wazuh API user. That is the user account that we'll be using. Now Shuffle will be making this request, so that is why we need to make sure that port is opened for all IP addresses. Now once you created your firewall rule to allow traffic inbound to Port '55,000', we can now look for Wazuh's application.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ZgOTWe.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-So let's go ahead and search that and then click it to start downloading and activating it. Once you have Wazuh activated, you can go ahead and drag and drop it onto your workflow. Now, I do have to mention when you click on the "Get-API", do remember to fill in the user and password for the Wazuh API account and include your Wazuh IP here.
+So let's go ahead and search that and then click it to start downloading and activating it. Once you have Wazuh activated, you can go ahead and drag and drop it onto your workflow. Now, I do have to mention when you click on the "Get-API", do remember to fill in the user and password for the Wazuh API account and include your Wazuh IP here. If you leave it as default, it's not going to work. So I'll just go ahead and change this right now.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/nlLQkf.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Brjbdo.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/6cflps.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/1NCMbZ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-If you leave it as default, it's not going to work. So I'll just go ahead and change this right now. I'll save the workflow. Now that's good, we'll head over to the Wazuh application. I'll leave "Find Actions" as "Run command". As for the API key, we'll select our "Get-API" at node.
+ I'll save the workflow. Now that's good, we'll head over to the Wazuh application. I'll leave "Find Actions" as "Run command". As for the API key, we'll select our "Get-API" at node.
 <br />
 <br />
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
