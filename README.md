@@ -1208,67 +1208,49 @@ So for example, just to make sure everything is crystal clear, if you set a time
 Then, we'll block the IP address of '8.8.8.8' which is Google's DNS. Then, we'll specify "-f" for the active response command. Now our command was "firewall-drop" and because we're using agent control, we need to specify the zero. Next I'll specify the "-u" and that is for the agent ID. Finally, I'll specify '002' and that is my Ubuntu machine.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/uPYi2r.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Now, before I execute this active response, let's head over to my Ubuntu machine and ping '8.8.8.8' just to make sure. We can see that it's successful, so let's head back over to our Wazuh. From here, we'll go ahead and execute our active response. Now, it says "Running active response 'firewall-drop' on: 002".Let's head back over to our Ubuntu machine.
+Now, before I execute this active response, let's head over to my Ubuntu machine and ping '8.8.8.8' just to make sure its okay. We can see that it's successful, so let's head back over to our Wazuh. From here, we'll go ahead and execute our active response. Now, it says "Running active response 'firewall-drop' on: 002".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/d8xnsB.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/2j9wSp.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-We see that it stopped, I guess it works. So let me go ahead and cancel this out and then we'll type in "iptables --list". Then, we'll see that it's dropping DNS Google responses. We can take a look at our active response log on our Ubuntu machine to see if the active response was successful.
+Let's head back over to our Ubuntu machine. We see that it stopped, I guess it works. So let me go ahead and cancel this out and then we'll type in "iptables --list". Then, we'll see that it's dropping DNS Google responses.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/TdESfz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/CkSpYz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/dq4ntA.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-This can be found under "/var/ossec/logs". Type in "ls" since we want to look for active responses. So we can go ahead and cat out active responses and we can see that there are some responses here that was successful. You can see that our '8.8.8.8' was here.
+We can take a look at our active response log on our Ubuntu machine to see if the active response was successful. This can be found under "/var/ossec/logs". Type in "ls" since we want to look for active responses. So we can go ahead and cat out active responses and we can see that there are some responses here that was successful. You can see that our '8.8.8.8' was here.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/8DiJHC.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/mndDCQ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/P3Cbhz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/8KrzZS.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1276,16 +1258,13 @@ This can be found under "/var/ossec/logs". Type in "ls" since we want to look fo
 On our Shuffle instance, let's add in the command "firewall-drop0". Scroll down on our Wazuh application, so we can find "Command" to type "firewall-drop0". Next, put in the arguments of '['8.8.8.8']'. Now, I'll save this out and then I'll rerun the workflow.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/L50EdX.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/azQGRI.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Pv20Zb.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1293,33 +1272,30 @@ On our Shuffle instance, let's add in the command "firewall-drop0". Scroll down 
 Let's head down to Wazuh and expand that out. It says "AR command was sent to all agents"... Interesting. I only sent it to number two, but that's okay. So that looks like it's been successful. Let's go and take a look at our Ubuntu machine. On the machine, I'll clear this out and then type in "cat active-responsees.log".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Q1ElqY.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/VUumhp.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/aumsOh.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Now, immediately I see an error that says "Cannot read source IP from data". So we know for a fact that it did not work. Now, just above it we do see our log. We see that the extra arguments our IP is listed in there and it cannot read our source IP from the data, but if you recall we did use agent control to execute our active response to test it out.
+Now, immediately I see an error that says "Cannot read source IP from data". So we know for a fact that it did not work. Now, just above it we do see our log. We see that the extra arguments our IP is listed in there and it cannot read our source IP from the data, but if you recall we did use agent control to execute our active response to test it out. Which is this one right here.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/65T1QK.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/P0G5EH.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/3ngehf.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/hC7Nl0.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1327,16 +1303,10 @@ Now, immediately I see an error that says "Cannot read source IP from data". So 
 Now, if we look at the parameters. I know it's kind of hard to read with the parameters, but says "extra_args" is blank. There's no data for the alert that is where the source IP lives. If you look at the log that Shuffle had sent over, there is nothing in the alert itself.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/q2luZ8.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/kt53SW.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1344,16 +1314,7 @@ Now, if we look at the parameters. I know it's kind of hard to read with the par
 So that tells me that our IP needs to be in the alert section. However, just to be safe I'm going to copy everything from the alert, up to the second curly bracket. So I'll go ahead and save that out and copy. I'll head over to our Shuffle instance.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/hUpbkY.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1361,16 +1322,10 @@ So that tells me that our IP needs to be in the alert section. However, just to 
 On our Shuffle, we want to scroll down and remove "Aguments". In the "Alert" section, let's go ahead and paste in our data. Now, let's go ahead and try that. I'll save this out and then we'll rerun the execution. However, before I run that, let's set up another ping towards '8.8.8.8' on our Ubuntu machine, just in case it does work.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Zk6ljb.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/osSr8h.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1378,33 +1333,33 @@ On our Shuffle, we want to scroll down and remove "Aguments". In the "Alert" sec
 So I'll set out another ping and head back over to our Shuffle. Now, we'll rerun our workflow. Let's scroll all the way down and select our Wazuh. Again, it does say an "AR command was sent to all agents". So it should be successful if our command was correctly done.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ugrmKP.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/kNOpnu.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/3ZpjOQ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/w58HNf.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Let's head over to our Ubuntu and look at that. I'll exit out of this and then I'll take a look at our IP table list. It's there! "dns.Google", perfect. Let me go ahead and remove this by typing "iptables --flush". So we know for a fact that our Shuffle is sending an active response over to Wazuh and Wazuh is instructing Ubuntu to actually perform that command.
+Let's head over to our Ubuntu and look at that. I'll exit out of this and then I'll take a look at our IP table list. It's there! "dns.Google", perfect. Let me go ahead and remove this by typing "iptables --flush". I'll just double-check to make sure that everything is gone. Perfect. So we know for a fact that our Shuffle is sending an active response over to Wazuh and Wazuh is instructing Ubuntu to actually perform that command.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/fXVHmC.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/4mA6G5.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/IiNODK.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/nwGDLN.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1412,33 +1367,21 @@ Let's head over to our Ubuntu and look at that. I'll exit out of this and then I
 Now the next step is to set up a user input, that way it will send an email to our SOC analyst providing all of that information. If the analyst says to go ahead and block it, Wazuh should instruct Ubuntu to block that IP.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
 <br />
 <br />
 So the only thing that we need to do is remove this chain or that link. Then, we'll go under triggers and we want to drag over "User_input_1". I'll connect VirusTotal over to the "User_input_1". Here I'll make sure that the email is selected and I'll use my trusty disposable email from SquareX because I don't want to use my email.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/B6Szlh.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/AskgKb.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/JArkfW.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Jfdkev.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1446,16 +1389,13 @@ So the only thing that we need to do is remove this chain or that link. Then, we
 For the sake of the demo, we can just say "Would you like to block this source IP:" and what is the source IP? We can just click on this plus icon and then look at the "Execution Arguments". So here's the source IP that we're interested in.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/zUu5mf.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/iew2sq.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/OTlhNr.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1463,16 +1403,13 @@ For the sake of the demo, we can just say "Would you like to block this source I
 So I'll highlight this and then I'll copy it. I'll remove it and then head over to the "User_input_1". Then, I'll paste in the variable. Now, if you're following along you might be like, "What the heck did I just do?" Going back, I was just using VirusTotals query input to take a look at what the variable for the source IP was.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/40bHvl.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/5CgcY6.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/ZJES7T.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1480,16 +1417,13 @@ So I'll highlight this and then I'll copy it. I'll remove it and then head over 
 So in order to do that, I just clicked on the plus button, looked at the execution argument, and then I tried to find out where the source IP was. It was located at the bottom and if I didn't know for sure, I looked at the value that was presented to me on the left. So I clicked on Source IP and then I just took the variable here. Copied it.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/wdFbgH.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/zbRU6v.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/wUFOg0.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1497,16 +1431,10 @@ So in order to do that, I just clicked on the plus button, looked at the executi
 Removed it since I don't want VirusTotal to take a look at it. Instead, I added it over to our "User_input_1". So in theory, if this workflow ran, it would ask the user if they would like to block this Source IP and it will also present the source IP to the the analyst.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/9YIR5H.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/QZd0EK.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1514,16 +1442,10 @@ Removed it since I don't want VirusTotal to take a look at it. Instead, I added 
 If the analyst said yes, I want to block that Source IP, the responsive feature should kick in. So let's go ahead and connect that over to our Wazuh. Make sure our Command is all good to go. Now, the source IP is no longer going to be a static IP.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/EZ6NaT.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/HlmhcS.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1531,84 +1453,66 @@ If the analyst said yes, I want to block that Source IP, the responsive feature 
 Instead, I'm going to remove that and then I will select the plus icon. Select "Execution Argument". Scroll down to source IP and then I'll select that. I noticed that the variable is outside of the bracket, so I'll remove that. Then, I'll put it in between the quotes.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/1qVZYS.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/o2aBpx.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/pbz65i.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<br />
-<br />
-Now that looks a lot better and a lot cleaner. I'll go ahead and save this workflow out, and now it's the moment of truth. I'm going to take a look at what the source IP is. In this case, the source IP is '103.180.149.26'. I'm going to go ahead and ping out that IP.
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/xUAtmK.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Hopefully, it'll accept my ping. Perfect. Let's hope our SOAR workflow works. Under our workflow, we'll rerun the workflow. So once we run it, it should go out and grab the API key for Wazuh. Then, it will enrich the data, in this case with IP. Afterwards, it will send an email to our analyst and depending on its response, it should activate a responce of action.
+Now that looks a lot better and a lot cleaner. I'll go ahead and save this workflow out, and now it's the moment of truth. I'm going to take a look at what the source IP is. In this case, the source IP is '103.180.149.26'.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/4AIf3V.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Jbc87w.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Let's head over to our disposable email. Click on "inbox" and let's refresh this. We have an email here that says "Would you like to block the source IP '103.180.149.26'. If this is TRUE click this..." In other words, if you want to block it, access this link. So let's try it out. 
+I'm going to go ahead and ping out that IP. Hopefully, it'll accept my ping. Let's hope our SOAR workflow works. Under our workflow, we'll rerun the workflow. So once we run it, it should go out and grab the API key for Wazuh. Then, it will enrich the data, in this case with IP. Afterwards, it will send an email to our analyst and depending on its response, it should activate a response of action.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/oMSi3k.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Fex5AC.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-Let's go ahead and do that. It'll say "Would you like to block this source IP:" and it automatically selects continue for me. So the next thing to do now is head over to our Ubuntu machine and see if our active response kicked in. Since, there's just way too many going on. I'll go ahead and exit that out.
+Let's head over to our disposable email. Click on "inbox" and let's refresh this. We have an email here that says "Would you like to block the source IP '103.180.149.26'. If this is TRUE click this..." In other words, if you want to block it, access this link. So let's try it out. Let's go ahead and do that. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/haeSAn.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/kfFUbO.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/yc6BHM.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/wqf7Mh.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<br />
+<br />
+It'll say "Would you like to block this source IP:" and it automatically selects continue for me. So the next thing to do now is head over to our Ubuntu machine and see if our active response kicked in. Since, there's just way too many going on. I'll go ahead and exit that out.
+<br />
+<br />
+<img src="https://snipboard.io/o3lCTM.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://snipboard.io/A5uT8f.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1616,33 +1520,12 @@ Let's go ahead and do that. It'll say "Would you like to block this source IP:" 
 Then I'll type in my IP tables. Let's list it out. So now our IP of '103.180.149.26' has been added to our IP tables. Our active response actions kicked in. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/duP9Dj.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-From here, the sky is the limit and it is up to your imagination on what you want to do with this automation. Perhaps, you want to automatically reset an account from an active directory if a user entered their credentials onto a fishing page or maybe you want to contain a host if there was suspicious activity, such as our Mimikats example. Automation is something to really think about as this is the direction that we're heading towards. Now again, I did not go through the last portion in detail intentionally, because I want you to get some hands-on experience and try it out yourself. 
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+From here, the sky is the limit and it is up to your imagination on what you want to do with this automation. Perhaps, you want to automatically reset an account from an active directory if a user entered their credentials onto a phishing page or maybe you want to contain a host if there was suspicious activity, such as our Mimikats example. Automation is something to really think about as this is the direction that we're heading towards. Now again, I did not go through the last portion in detail intentionally, because I want you to get some hands-on experience and try it out yourself. 
 <br />
 <br />
 <br />
@@ -1650,16 +1533,7 @@ From here, the sky is the limit and it is up to your imagination on what you wan
 Now here's your homework, you want to create a Ubuntu machine in the cloud with the lowest minimum specs, so 1 gig and 25 hard drive space. You want to make sure you use a password generator so it is not easy to guess. This machine should allow all traffic inbound, meaning all sources will have access to your Ubuntu machine. You want to install a Wazuh agent onto that Ubuntu machine. Then, immediately you should see multiple failed SSH attempt alerts. Push all level five alerts to Shuffle and perform IP enrichment using VirusTotal. Send the details via email to the user, asking if the user wants to block the IP and automatically create an alert in the Hive. If the user selects "yes" to block, the IP should automatically be placed in IP tables. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/a5AGwx.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
