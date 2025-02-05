@@ -1037,19 +1037,19 @@ To find this, we can head back over to Wazuh's dashboard. you want to click on t
 <br />
 <br />
 <br />
-Now, we can also find this ID in our sample log or alert if we head over to Shuffle. Click on our "Execution Arguments". Click on our person icon. Then, if we were to expand our "Execution Arguments". Scroll all the way down until you find a section called agent.
+Now, we can also find this ID in our sample log or alert if we head over to Shuffle. Click on our "Execution Arguments". Click on our person icon. Then, if we were to expand our "Execution Arguments". Scroll all the way down until you find a section called "agent".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/sjBuNV.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/3B2czC.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/tyV3qL.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/Etrg2l.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1057,16 +1057,13 @@ Now, we can also find this ID in our sample log or alert if we head over to Shuf
 There's an ID. In my case, the ID is '001' for this Windows machine. So as an agents list, I can either type it in manually or I can select it to make it dynamic. I'll click "Execution Arguments". Scroll all the way down until I see my agent ID.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/62bv8f.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/nlYBwM.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/zDhbEa.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1074,16 +1071,10 @@ There's an ID. In my case, the ID is '001' for this Windows machine. So as an ag
 I will set the "Wait for complete" to true. Now we have "Alert", "Arguments", "Command" and "Custom". However, before we move on to the next couple of fields, we must configure active response on our Wazuh manager. Let's head over to our manager console.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/SoRCzd.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/U5ZSFo.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1091,16 +1082,10 @@ I will set the "Wait for complete" to true. Now we have "Alert", "Arguments", "C
 On our manager console, we want to open up the "osesc" configuration file. Scroll down to the bottom and eventually, you'll find what is called "Active response". Now, we can always hold down cntrl+w and type in "Active Response". So under active response, there are some pre-built response options that we will be using and if you take a look there are tags called "command".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/TAC1ny.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/5bXJqf.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1108,33 +1093,21 @@ On our manager console, we want to open up the "osesc" configuration file. Scrol
 So here there's a command called "disable-account". The next command is "restart-Wazuh". There's one called "firewall-drop" and many more. These commands are essentially what you invoke. In other words, if something bad happens then do these commands.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/vsfy1d.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/sx4guh.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/8adDIE.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-The most important thing here is that we want to keep keep in mind of the name itself. So in my example, I'll be using "firewall-drop". This command will modify the IP tables of our Ubuntu machine, essentially dropping all traffic to it or to the IP.
+The most important thing here is that we want to keep in mind of the name itself. So in my example, I'll be using "firewall-drop". This command will modify the IP tables of our Ubuntu machine, essentially dropping all traffic to it or to the IP.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/85s3LU.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1142,50 +1115,26 @@ The most important thing here is that we want to keep keep in mind of the name i
 We will now need to create an active response tag and make sure that the command reflects the command name that we want to use. For example, let me scroll down until there's no more commands and right here. We see that the active response options here. I'll remove the comment section and then I'll type in" command".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/0jkDEI.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/emFCL8.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-So what is the name of the command that I want to run it is called "firewall-drop", then I want to close out the command tag. Next is the location tag, I'll put this as "local" and then close that out. Now what "local" means is that the host that generated the alert is where the script will be ran.
+So what is the name of the command that I want to run it is called "firewall-drop", then I want to close out the command tag. Next is the location tag, I'll put this as "local" and then close that out. Now what "local" means is that the host that generated the alert is where the script will be ran. So for example, on my Ubuntu machine if there was a malicious IP hitting my Ubuntu machine, that is where the script is going to be executed. 
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/nRXgvM.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
 <br />
-So for example, on my Ubuntu machine if there was a malicious IP hitting my Ubuntu machine, that is where the script is going to be executed. Next is "level", so which is the level of the alert. If you recall when we were configuring our Shuffle integration, instead of using the "level" we used "rule_id".
+Next is "level", so which is the level of the alert. If you recall when we were configuring our Shuffle integration, instead of using the "level" we used "rule_id".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/UCcWrv.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1193,16 +1142,7 @@ So for example, on my Ubuntu machine if there was a malicious IP hitting my Ubun
 In this case, for our active response. I'm not going to be using "rule_id", instead I'm going to be using "level". I'll close out that tag. Finally, we need to type in "timeout". Now, we have our active response, so let's go ahead and save this out.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/RH5VEQ.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1210,13 +1150,7 @@ In this case, for our active response. I'm not going to be using "rule_id", inst
 We'll restart the Wazuh manager. We can restart it by typing "systemctl restart wazuh-manager". There is one important thing to keep in mind if you use active response, especially when it comes to API's, it's that the command name appends the timeout to the name, but it is hidden.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/GfR0U5.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -1227,16 +1161,7 @@ We'll restart the Wazuh manager. We can restart it by typing "systemctl restart 
 I'll explain. Currently, our command name was set to "firewall-drop". However, if we want to use this via an API. We must append our timeout option to it, but there is a hidden timeout field. So my timeout was zero, so now it will append a zero in front of "firewall-drop".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/aoVF4P.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1244,16 +1169,10 @@ I'll explain. Currently, our command name was set to "firewall-drop". However, i
 Now, how would you know that? One way to see the name and test to see if your script is active, is to use what is called an Agent Control Binary. This is located under "var/ossec/bin". So let's change our directory there. Type in "ls" and we can see "agent_control". That is the binary that we want.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/59uFic.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/IW20fh.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1261,16 +1180,13 @@ Now, how would you know that? One way to see the name and test to see if your sc
 So I'll type in "agent_control" and without any options. That way we can see what kind of options it provides. At the bottom, you can see there's a "-L". This list available active responses. So let's go and use that. Now, you can see the response name "firewall_drop0". That is the name we need to use, if we want to utilize the API.
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/MSCxNE.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/45mAJi.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/SUv2CV.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
@@ -1278,16 +1194,13 @@ So I'll type in "agent_control" and without any options. That way we can see wha
 So for example, just to make sure everything is crystal clear, if you set a timeout option say '600' seconds. That means your firewall or command name will be "firewall-drop600", and you can always verify using "./agent_control -L". To test out your active response actions, we can run "./agent_control -b".
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/rLHYjz.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/D6icHV.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://snipboard.io/8PCv1W.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 <br />
